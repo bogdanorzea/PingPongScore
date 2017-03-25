@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ping Pong Score</string>
+    <string name="player_one_name">Player one</string>
+    <string name="add_point_button">Add point</string>
+    <string name="player_two_name">Player two</string>
+    <string name="reset_button">Reset</string>
+    <string name="zero_string">0</string>
+</resources>

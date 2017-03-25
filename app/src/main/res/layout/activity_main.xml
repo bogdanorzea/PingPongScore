@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context="com.bogdanorzea.pingpongscore.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin"
+        android:layout_weight="10"
+        android:background="@drawable/border"
+        android:baselineAligned="false">
+
+        <!-- Player 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/player1_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:layout_weight="1"
+                android:hint="@string/player_one_name"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <!-- Score -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="fill_vertical">
+
+                <TextView
+                    android:id="@+id/player1_points"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin"
+                    android:text="@string/zero_string"
+                    android:textAlignment="center"
+                    android:textSize="72sp" />
+
+                <TextView
+                    android:id="@+id/player1_sets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zero_string"
+                    android:textAlignment="center"
+                    android:textSize="32sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/player1_addPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_weight="1"
+                android:text="@string/add_point_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorBorder">
+
+        </LinearLayout>
+
+        <!-- Player 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/player2_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:layout_weight="1"
+                android:hint="@string/player_two_name"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <!-- Score -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="fill_vertical">
+
+                <TextView
+                    android:id="@+id/player2_sets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zero_string"
+                    android:textAlignment="center"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/player2_points"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin"
+                    android:text="@string/zero_string"
+                    android:textAlignment="center"
+                    android:textSize="72sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/player2_addPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_weight="1"
+                android:text="@string/add_point_button" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Reset button -->
+    <Button
+        android:id="@+id/resetScore"
+        android:layout_width="wrap_content"
+        android:layout_height="32sp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin"
+        android:layout_weight="1"
+        android:text="@string/reset_button"
+        android:textSize="16sp" />
+</LinearLayout>
