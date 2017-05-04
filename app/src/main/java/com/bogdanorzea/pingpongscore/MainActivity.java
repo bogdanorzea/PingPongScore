@@ -42,12 +42,16 @@ public class MainActivity extends AppCompatActivity {
         namePlayer1 = (EditText) findViewById(R.id.player1_name);
         namePlayer2 = (EditText) findViewById(R.id.player2_name);
 
+        // TODO update player name on submit
+
         addPointPlayer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 myGame.addPointPlayer1();
                 updateScore();
                 if (myGame.hasGameEnded()) {
+                    //TODO return set player name using:
+                    // endGame(v, myGame.getPlayerNames()[0]);
                     endGame(v, "Player 1");
                 }
             }
@@ -58,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
                 myGame.addPointPlayer2();
                 updateScore();
                 if (myGame.hasGameEnded()) {
+                    //TODO return set player name using:
+                    // endGame(v, myGame.getPlayerNames()[1]);
                     endGame(v, "Player 2");
                 }
             }
@@ -68,10 +74,10 @@ public class MainActivity extends AppCompatActivity {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
 
-                builder.setTitle("Confirm");
-                builder.setMessage("Are you sure you want to reset game?");
+                builder.setTitle(R.string.confirm_dialog_title);
+                builder.setMessage(R.string.confirm_dialog_message);
 
-                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
                         myGame.resetGame();
@@ -85,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -117,17 +123,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateName() {
-        namePlayer1.setText(myGame.getName()[0]);
-        namePlayer2.setText(myGame.getName()[1]);
+        namePlayer1.setText(myGame.getPlayerNames()[0]);
+        namePlayer2.setText(myGame.getPlayerNames()[1]);
     }
 
     private void endGame(View v, String playerName) {
         // Display Congratulation window
         AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
 
-        builder.setMessage(playerName + " won then game!");
+        builder.setMessage(playerName + " won the game!");
 
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
 
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
@@ -155,10 +161,9 @@ public class MainActivity extends AppCompatActivity {
         outState.putInt(PLAYER_2_SCORE, myGame.getScore()[1]);
         outState.putInt(PLAYER_1_SETS, myGame.getSets()[0]);
         outState.putInt(PLAYER_2_SETS, myGame.getSets()[1]);
-        outState.putString(PLAYER_1_NAME, myGame.getName()[0]);
-        outState.putString(PLAYER_2_NAME, myGame.getName()[1]);
+        outState.putString(PLAYER_1_NAME, myGame.getPlayerNames()[0]);
+        outState.putString(PLAYER_2_NAME, myGame.getPlayerNames()[1]);
 
         super.onSaveInstanceState(outState);
     }
-
 }

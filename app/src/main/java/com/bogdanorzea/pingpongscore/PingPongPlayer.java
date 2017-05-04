@@ -1,7 +1,6 @@
 package com.bogdanorzea.pingpongscore;
 
 class PingPongPlayer {
-
     private int score = 0;
     private int sets = 0;
     private String name = null;

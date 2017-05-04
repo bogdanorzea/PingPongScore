@@ -132,13 +132,13 @@ public class PingPongUnitTest {
     public void newGame_addPlayer1Name() throws Exception {
         PingPongGame test = new PingPongGame();
         test.setPlayer1Name("Test");
-        assertTrue("Test".equals(test.getName()[0]));
+        assertTrue("Test".equals(test.getPlayerNames()[0]));
     }
 
     @Test
     public void newGame_addPlayer2Name() throws Exception {
         PingPongGame test = new PingPongGame();
         test.setPlayer2Name("Test");
-        assertTrue("Test".equals(test.getName()[1]));
+        assertTrue("Test".equals(test.getPlayerNames()[1]));
     }
 }

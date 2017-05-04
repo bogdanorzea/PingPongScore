@@ -38,7 +38,7 @@
                 android:inputType="textPersonName"
                 android:maxLines="1"
                 android:textAlignment="center"
-                android:textSize="24sp" />
+                android:textSize="@dimen/player_name_text_size" />
 
             <!-- Score -->
             <LinearLayout
@@ -49,12 +49,12 @@
 
                 <TextView
                     android:id="@+id/player1_points"
-                    android:layout_width="100dp"
+                    android:layout_width="@dimen/score_layout_width"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/margin"
                     android:text="@string/zero_string"
                     android:textAlignment="center"
-                    android:textSize="72sp" />
+                    android:textSize="@dimen/score_text_size" />
 
                 <TextView
                     android:id="@+id/player1_sets"
@@ -62,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/zero_string"
                     android:textAlignment="center"
-                    android:textSize="32sp" />
+                    android:textSize="@dimen/set_text_size" />
             </LinearLayout>
 
             <Button
@@ -76,7 +76,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="3dp"
+            android:layout_width="@dimen/separator_width"
             android:layout_height="match_parent"
             android:background="@color/colorBorder">
 
@@ -104,7 +104,7 @@
                 android:inputType="textPersonName"
                 android:maxLines="1"
                 android:textAlignment="center"
-                android:textSize="24sp" />
+                android:textSize="@dimen/player_name_text_size" />
 
             <!-- Score -->
             <LinearLayout
@@ -119,16 +119,16 @@
                     android:layout_height="wrap_content"
                     android:text="@string/zero_string"
                     android:textAlignment="center"
-                    android:textSize="32sp" />
+                    android:textSize="@dimen/set_text_size" />
 
                 <TextView
                     android:id="@+id/player2_points"
-                    android:layout_width="100dp"
+                    android:layout_width="@dimen/score_layout_width"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/margin"
                     android:text="@string/zero_string"
                     android:textAlignment="center"
-                    android:textSize="72sp" />
+                    android:textSize="@dimen/score_text_size" />
             </LinearLayout>
 
             <Button
@@ -146,10 +146,10 @@
     <Button
         android:id="@+id/resetScore"
         android:layout_width="wrap_content"
-        android:layout_height="32sp"
+        android:layout_height="@dimen/reset_layout_height"
         android:layout_gravity="center"
         android:layout_margin="@dimen/margin"
         android:layout_weight="1"
         android:text="@string/reset_button"
-        android:textSize="16sp" />
+        android:textSize="@dimen/reset_text_size" />
 </LinearLayout>

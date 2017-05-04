@@ -5,4 +5,9 @@
     <string name="player_two_name">Player two</string>
     <string name="reset_button">Reset</string>
     <string name="zero_string">0</string>
+    <string name="confirm_dialog_title">Confirm</string>
+    <string name="confirm_dialog_message">Are you sure you want to reset game?</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="ok">OK</string>
 </resources>

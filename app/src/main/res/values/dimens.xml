@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="margin">8dp</dimen>
+    <dimen name="player_name_text_size">24sp</dimen>
+    <dimen name="score_text_size">72sp</dimen>
+    <dimen name="score_layout_width">100dp</dimen>
+    <dimen name="reset_layout_height">32sp</dimen>
+    <dimen name="reset_text_size">16sp</dimen>
+    <dimen name="set_text_size">32sp</dimen>
+    <dimen name="separator_width">3dp</dimen>
 </resources>

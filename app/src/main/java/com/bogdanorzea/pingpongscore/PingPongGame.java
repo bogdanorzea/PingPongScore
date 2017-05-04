@@ -1,10 +1,8 @@
 package com.bogdanorzea.pingpongscore;
 
-
 class PingPongGame {
-    int SET_LENGTH = 11;
-    int MATCH_LENGTH = 5;
-
+    private int SET_LENGTH = 11;
+    private int MATCH_LENGTH = 5;
     private boolean gameEnded = false;
     private PingPongPlayer player1;
     private PingPongPlayer player2;
@@ -79,7 +77,7 @@ class PingPongGame {
         player2.resetGame();
     }
 
-    String[] getName() {
+    String[] getPlayerNames() {
         return new String[]{player1.getName(), player2.getName()};
     }
 
