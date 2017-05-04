@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String ENABLED_ADD_POINTS = "ENABLED_ADD_POINTS";
+    private static final String ENABLED_ADD_POINTS = "ENABLED_ADD_POINTS";
     private static final String PLAYER_1_SCORE = "PLAYER_1_SCORE";
     private static final String PLAYER_2_SCORE = "PLAYER_2_SCORE";
     private static final String PLAYER_1_SETS = "PLAYER_1_SETS";
